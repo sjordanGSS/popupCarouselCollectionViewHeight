@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<xct:Popup xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+           xmlns:xct="clr-namespace:Xamarin.CommunityToolkit.UI.Views;assembly=Xamarin.CommunityToolkit"
+             x:Class="popupCarouselCollectionViewHeight.MyPopup">
+    <CarouselView>
+        <CarouselView.ItemsSource>
+            <x:Array Type="{x:Type x:String}">
+                <x:String>item</x:String>
+                <x:String>item2</x:String>
+            </x:Array>
+        </CarouselView.ItemsSource>
+        
+        <CarouselView.ItemTemplate>
+            <DataTemplate>
+                <CollectionView>
+                    <CollectionView.ItemsSource>
+                        <x:Array Type="{x:Type x:String}">
+                            <x:String>item</x:String>
+                        </x:Array>
+                    </CollectionView.ItemsSource>
+
+                    <CollectionView.ItemTemplate>
+                        <DataTemplate>
+                            <Button SizeChanged="Button_SizeChanged"
+                                    HeightRequest="{Binding Source={RelativeSource Mode=Self}, Path=Width}"/>
+                        </DataTemplate>
+                    </CollectionView.ItemTemplate>
+                </CollectionView>
+            </DataTemplate>
+        </CarouselView.ItemTemplate>
+    </CarouselView>
+</xct:Popup>
