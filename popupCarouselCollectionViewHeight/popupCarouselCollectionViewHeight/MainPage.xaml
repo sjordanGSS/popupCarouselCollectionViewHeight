@@ -4,8 +4,8 @@
              xmlns:xct="clr-namespace:Xamarin.CommunityToolkit.UI.Views;assembly=Xamarin.CommunityToolkit"
              x:Class="popupCarouselCollectionViewHeight.MainPage">
 
-    <FlexLayout Direction="Column">
-        <CarouselView FlexLayout.Grow="1"
+    <!--<FlexLayout Direction="Column">-->
+        <!--<CarouselView FlexLayout.Grow="1"
                       Loop="False">
             <CarouselView.ItemsSource>
                 <x:Array Type="{x:Type x:String}">
@@ -15,8 +15,8 @@
             </CarouselView.ItemsSource>
 
             <CarouselView.ItemTemplate>
-                <DataTemplate>
-                    <CollectionView>
+                <DataTemplate>-->
+                    <CollectionView FlexLayout.Grow="1">
                         <CollectionView.ItemsSource>
                             <x:Array Type="{x:Type x:String}">
                                 <x:String>item</x:String>
@@ -29,12 +29,12 @@
                             </DataTemplate>
                         </CollectionView.ItemTemplate>
                     </CollectionView>
-                </DataTemplate>
+                <!--</DataTemplate>
             </CarouselView.ItemTemplate>
-        </CarouselView>
-        <Button FlexLayout.Shrink="0"
+        </CarouselView>-->
+        <!--<Button FlexLayout.Shrink="0"
                 Text="Show Popup"
                 Clicked="Button_Clicked" />
-    </FlexLayout>
+    </FlexLayout>-->
 
 </ContentPage>
