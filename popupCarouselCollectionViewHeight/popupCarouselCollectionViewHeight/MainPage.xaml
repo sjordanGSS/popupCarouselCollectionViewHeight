@@ -25,7 +25,8 @@
 
                         <CollectionView.ItemTemplate>
                             <DataTemplate>
-                                <Button HeightRequest="{Binding Source={RelativeSource Mode=Self}, Path=Width}"/>
+                                <Button HeightRequest="{Binding Source={RelativeSource Mode=Self}, Path=Width}"
+                                        Clicked="button_Clicked_1"/>
                             </DataTemplate>
                         </CollectionView.ItemTemplate>
                     </CollectionView>

@@ -21,5 +21,12 @@ namespace popupCarouselCollectionViewHeight
         {
             Navigation.ShowPopup(new MyPopup());
         }
+
+        private void button_Clicked_1(object sender, EventArgs e)
+        {
+            var button = (Button)sender;
+            button.IsVisible = false;
+            button.IsVisible = true;
+        }
     }
 }
